@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details</title>
+</head>
+<body>
+    <div style="padding: 2rem;">
+        <a href="{% url 'restraunt:index'%}">Back</a>
+        <a href="{% url 'restraunt:delete' item.id%}">Delete</a>
+        <a href="{% url 'restraunt:update' item.id%}">Edit</a>
+    </div>
+
+    <img src="{{item.food_image.url}}" alt="" style="height: 500px ">
+    <h3>{{item.food_name}}</h3>
+    <h3>Rs. {{item.food_price}}</h3>
+    <h3>{{item.food_discount}} %</h3>
+    
+</body>    
+
+</html>
